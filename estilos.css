@@ -1,0 +1,69 @@
+body {
+    background-image: url('T:/mathvnny/fundo.png');
+    background-size: cover;
+    /* faz a img cobrir toda a area do fundo */
+    background-position: center;
+    /* centralizar */
+    background-repeat: no-repeat;
+    /* n repetir imagem*/
+    background-attachment: fixed;
+    color: #0000FF;
+    /*cor do texto como azul */
+    text-align: center;
+    /*centraliza o texto no corpo da pagina */
+    font-size: larger;
+    /*aumenta o tamanho da fonte do texto */
+    margin: 0;
+    /*remove a margem padrão*/
+    padding: 0;
+    /*remove o padding padrão */
+}
+
+body::before {
+    content: "";
+    /*criar uma camada pseudo-elemento*/
+    position: absolute;
+    /*a camada cobrir o fundo*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /*cor preta com 50% de opacidade*/
+    z-index: -1;
+    /*coloca a camada abaixo do conteudo*/
+}
+
+.container {
+    position: relative;
+    /* o conteudo dentro do container acima da camada de fundo*/
+    z-index: 1;
+    /* o conteudo estará acima da camada de fundo*/
+}
+
+.btn {
+    display: inline-block;
+    /* cria um botão no link */
+    padding: 10px 20px;
+    /* espaço interno ao botão. */
+    margin-top: 20px;
+    /* Adiciona um espaço acima do botão. */
+    background-color: #ff0000;
+    /* define a cor de fundo do botão como azul. */
+    color: #FFFFFF;
+    /* Define a cor do texto do botão como branco. */
+    text-decoration: none;
+    /* Remove o sublinhado padrão dos links. */
+    border-radius: 5px;
+    /* Adiciona bordas arredondadas ao botão. */
+    font-size: larger;
+    /* Aumenta o tamanho da fonte para o texto do botão. */
+    transition: background-color 0.3s ease;
+    /* Adiciona um efeito de transição à mudança de cor. */
+}
+
+
+.btn:hover {
+    background-color: #0000CC;
+    /* Altera a cor de fundo do botão quando o mouse está sobre ele. */
+}
