@@ -1,5 +1,5 @@
 body {
-    background-image: url('T:/mathvnny/fundo.png');
+    background-image: url('fundo.png');
     background-size: cover;
     /* faz a img cobrir toda a area do fundo */
     background-position: center;
@@ -7,10 +7,12 @@ body {
     background-repeat: no-repeat;
     /* n repetir imagem*/
     background-attachment: fixed;
-    color: #0000FF;
+    color: #ffffff;
     /*cor do texto como azul */
     text-align: center;
     /*centraliza o texto no corpo da pagina */
+    
+
     font-size: larger;
     /*aumenta o tamanho da fonte do texto */
     margin: 0;
@@ -32,6 +34,14 @@ body::before {
     /*cor preta com 50% de opacidade*/
     z-index: -1;
     /*coloca a camada abaixo do conteudo*/
+}
+
+ol, ul{
+    text-align: left;
+    font-size:larger ;
+    font-style: oblique;
+    font-family: Impact, fantasy;
+
 }
 
 .container {
