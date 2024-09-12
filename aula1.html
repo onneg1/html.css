@@ -1,79 +1,100 @@
-body {
-    background-image: url('fundo.png');
-    background-size: cover;
-    /* faz a img cobrir toda a area do fundo */
-    background-position: center;
-    /* centralizar */
-    background-repeat: no-repeat;
-    /* n repetir imagem*/
-    background-attachment: fixed;
-    color: #ffffff;
-    /*cor do texto como azul */
-    text-align: center;
-    /*centraliza o texto no corpo da pagina */
-    
+<!DOCTYPE html> <!-- Informa ao navegador que o documento 
+    está em HTML5, padrão mais recente do HTML. -->
 
-    font-size: larger;
-    /*aumenta o tamanho da fonte do texto */
-    margin: 0;
-    /*remove a margem padrão*/
-    padding: 0;
-    /*remove o padding padrão */
-}
+<html>
+<!-- Elemento raiz de um documento HTML. O que está dentro dessa tag faz parte do conteúdo da página-->
 
-body::before {
-    content: "";
-    /*criar uma camada pseudo-elemento*/
-    position: absolute;
-    /*a camada cobrir o fundo*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /*cor preta com 50% de opacidade*/
-    z-index: -1;
-    /*coloca a camada abaixo do conteudo*/
-}
+<head>
+<!--informações meta, links para arquivos de estilo, 
+e outros dados que não são exibidos diretamente na página. -->
 
-ol, ul{
-    text-align: left;
-    font-size:larger ;
-    font-style: oblique;
-    font-family: Impact, fantasy;
+<meta charset="UTF-8" />
+<!-- caracteres como UTF-8, caracteres especiais e 
+            acentuação serão exibidos corretamente. -->
 
-}
+<title>mathvnny</title>
+<!-- Define o título da página, que aparece na aba do navegador: "Teste" -->
+<link rel="stylesheet" href="estilos.css" /> <!-- linkar ao arquivo .css-->
 
-.container {
-    position: relative;
-    /* o conteudo dentro do container acima da camada de fundo*/
-    z-index: 1;
-    /* o conteudo estará acima da camada de fundo*/
-}
+</head> <!-- fecha <head>. -->
 
-.btn {
-    display: inline-block;
-    /* cria um botão no link */
-    padding: 10px 20px;
-    /* espaço interno ao botão. */
-    margin-top: 20px;
-    /* Adiciona um espaço acima do botão. */
-    background-color: #ff0000;
-    /* define a cor de fundo do botão como azul. */
-    color: #FFFFFF;
-    /* Define a cor do texto do botão como branco. */
-    text-decoration: none;
-    /* Remove o sublinhado padrão dos links. */
-    border-radius: 5px;
-    /* Adiciona bordas arredondadas ao botão. */
-    font-size: larger;
-    /* Aumenta o tamanho da fonte para o texto do botão. */
-    transition: background-color 0.3s ease;
-    /* Adiciona um efeito de transição à mudança de cor. */
-}
+<body>
+<div class="container">
+<p>Seja bem vindo!</p>
+<!-- <p> cria um parágrafo. -->
+<a href="http://www.google.com.br" class="btn">Clique Aqui</a>
+<!-- <a> cria um link para a URL especificada no 
+atributo href. O texto do link será "aqui". -->
+</div>
+<p></p>
+<!--
+<a href="ARQ.pptx">desenvolvimentodesistemas1</a> <!-- linkando o arquivo criado por mim
+                 criando um clicavel "desenvolvimentodesistemas1 p/ baixar o arquivo"
+<a href="#paragrafo3">Ir para páragrafo 3</a>
+<!-- direcionar o clique do usuário ao paragrafo 3
+<!-- outros elementos
+<p id="paragrafo3">Parágrafo de rodapé.</p>
+-->
 
 
-.btn:hover {
-    background-color: #0000CC;
-    /* Altera a cor de fundo do botão quando o mouse está sobre ele. */
-}
+<!--
+<table>
+<!-- Criar uma tabela apresentando informações:
+tabela com 2 colunas e 3 linhas.
+<tr>
+<td>Feijão, 10kg</td> <!-- Linha 1, coluna 1
+<td>Arroz, 5kg</td>   <!-- Linha 1, coluna 2
+</tr>
+<tr>
+<td>Caldo Verde, 200L</td> <!-- Linha 2, coluna 1
+<td>Cenoura, 300un</td>    <!-- Linha 2, coluna 2
+</tr>
+<tr>
+<td>Coxinha, 8un</td> <!-- Linha 3, coluna 1
+<td>Batata, 50kg</td> <!-- Linha 3, coluna 2
+</tr>
+</table>
+-->
+
+<ol>
+    <!-- cria uma lista, e numera a mesma-->
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+
+<ul>
+    <!-- cria uma lista, porém com um botão para organizar-->
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<ol type="I">
+    <!-- Listas ordenadas, nesse exmplo, usei type, que permite especificar o tipo de
+    marcador a ser usado: números(padrão), números romanos ou letras. -->
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ol>
+
+<form action ="salvar_dados.php" method="post">
+    <input type="text" placeholder="Digite aqui"><br/>
+    <!-- cria uma caixa que aceita interação com o usuario, permitindo
+    que o mesmo digite na caixa (placeholder)-->
+    <input type="checkbox">checkbox<br/>
+    <!-- cria um checkbox em caixa com o nome "checkbox"-->
+    <input type="radio">Radio button <br/>
+    <!-- cria um checkbox com forma arredondada com nome de "radio button"-->
+    <input type="range"><br/>
+    <!-- cria uma barrinha de elevação, na cor azul.-->
+    <input type="submit" value="Enviar">
+    <!-- cria um botão com nome de "enviar", que direciona para a pagina php.-->
+    </form>
+<!-- criar um formulário com campos!-->    
+
+
+
+</body> <!-- Fecha a tag <body>. -->
+
+</html> <!-- Fecha a tag <html>. -->
